@@ -4,7 +4,7 @@
  * @profile PHP Developer
  */
 
-namespace ricgrangeia\fullcalendar\Application\Assets;
+namespace ricgrangeia\notifications\Application\Assets;
 
 use yii\web\AssetBundle;
 
@@ -19,5 +19,5 @@ class MomentAsset extends AssetBundle
 		'plugins/moment/moment.js',
 	];
 	/** @var  string  The location of the Moment.js library */
-	public $sourcePath = '@vendor/ricgrangeia/yii2-fullcalendar/src/UI/Assets';
+	public $sourcePath = '@vendor/ricgrangeia/yii2-notifications/src/UI/Assets';
 }

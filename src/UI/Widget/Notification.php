@@ -1,6 +1,6 @@
 <?php
 
-namespace vendor\ricgrangeia\notifications\UI\Widget;
+namespace ricgrangeia\notifications\UI\Widget;
 
 use yii\base\Widget;
 use ricgrangeia\notifications\Application\Assets\CoreAsset;

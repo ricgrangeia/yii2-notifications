@@ -4,7 +4,7 @@
  * @profile PHP Developer
  */
 
-namespace ricgrangeia\fullcalendar\Application\Assets;
+namespace ricgrangeia\notifications\Application\Assets;
 
 use Yii;
 use yii\web\AssetBundle;
@@ -42,13 +42,13 @@ class CoreAsset extends AssetBundle
 	public $googleCalendar = false;
 	/** @var  array Required JS files for the fullcalendar */
 	public $js = [
-		'plugins/fullcalendar/index.global.min.js',
+		'plugins/notifications/index.global.min.js',
 
 	];
 	/** @var  string Language for the fullcalendar */
 	public $language = 'en';
 	/** @var  string Location of the fullcalendar distribution */
-	public $sourcePath = '@vendor/ricgrangeia/yii2-fullcalendar/src/UI/Assets';
+	public $sourcePath = '@vendor/ricgrangeia/yii2-notifications/src/UI/Assets';
 
 
 	public function init() {
@@ -56,11 +56,11 @@ class CoreAsset extends AssetBundle
 
 		parent::init();
 
-		if (!isset(Yii::$app->i18n->translations['yii2fullcalendar']))
+		if (!isset(Yii::$app->i18n->translations['yii2notifications']))
 		{
-			Yii::$app->i18n->translations['yii2fullcalendar'] = [
+			Yii::$app->i18n->translations['yii2notifications'] = [
 				'class' => PhpMessageSource::class,
-				'basePath' => '@ricgrangeia/fullcalendar/UI/messages',
+				'basePath' => '@ricgrangeia/notifications/UI/messages',
 				'sourceLanguage' => 'en',
 			];
 		}
@@ -72,14 +72,14 @@ class CoreAsset extends AssetBundle
 	public function registerAssetFiles($view)
 	{
 		$language = empty($this->language) ? \Yii::$app->language : $this->language;
-		if (file_exists($this->sourcePath . "plugins/fullcalendar/locale/$language.js")) {
+		if (file_exists($this->sourcePath . "plugins/notifications/locale/$language.js")) {
 			$this->js[] = "locale/$language.js";
 		}
 
 		if ($this->googleCalendar) {
 			$this->js[] = 'gcal.js';
 		}
-		
+
 		// We need to return the parent implementation otherwise the scripts are not loaded
 		return parent::registerAssetFiles($view);
 	}

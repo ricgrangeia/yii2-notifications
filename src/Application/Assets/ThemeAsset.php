@@ -4,7 +4,7 @@
  * @profile PHP Developer
  */
 
-namespace ricgrangeia\fullcalendar\Application\Assets;
+namespace ricgrangeia\notifications\Application\Assets;
 
 use yii\jui\JuiAsset;
 use yii\web\AssetBundle;
