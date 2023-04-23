@@ -1,0 +1,32 @@
+{
+  "name": "ricgrangeia/yii2-notifications",
+  "description": "Yii2 widget for fullcalendar",
+  "require": {
+    "php": ">=8.0",
+    "yiisoft/yii2": ">=2.0.9",
+    "yiisoft/yii2-jui": ">=2.0.6"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "keywords": [
+    "notifications",
+    "javascript",
+    "warnings",
+  ],
+  "homepage": "https://github.com/ricgrangeia/yii2-notifications",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ricardo Grangeia",
+      "email": "ricardograngeia@gmail.com"
+    },
+  ],
+  "autoload": {
+    "psr-4": {
+      "ricgrangeia\\notifications\\": "src"
+    }
+  }
+}
